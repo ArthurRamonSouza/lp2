@@ -60,7 +60,7 @@ public class Main {
         
         mSequencial.run();
         
-        //System.out.println("Matriz AB Sequencial: ");
+        //System.out.printlns("Matriz AB Sequencial: ");
         //imprimirMatriz(matrizAB, tamMatriz);
         System.out.println("Tempo de execucao Concorrente: " + finalConcorrente);
         System.out.println("Tempo de execucao Sequencial: " + mSequencial.getTempoDecorrido());
