@@ -28,7 +28,7 @@ public class Main {
 
         //Populando matrizes e array
         for (int l = 0; l < tamMatriz; l++) {
-            threads[l] = new Thread();
+        
             for (int c = 0; c < tamMatriz; c++) {
                 matrizA[l][c] = gerador.nextInt(0, 10);
                 matrizB[l][c] = gerador.nextInt(0, 10);
@@ -45,8 +45,8 @@ public class Main {
         long start = System. currentTimeMillis();
         while(linha < tamMatriz){
             m.setLinha(linha);
-            Thread t = new Thread(m);
-            t.start();
+            threads[linha] = new Thread(m);
+            threads[linha].start();
             linha++;
         }
         long end = System. currentTimeMillis();
