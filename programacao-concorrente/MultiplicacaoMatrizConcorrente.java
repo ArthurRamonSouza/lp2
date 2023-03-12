@@ -12,7 +12,7 @@ public class MultiplicacaoMatrizConcorrente implements Runnable {
 
     public void setLinha(int l) {
         linha = l;
-    }
+    }s
 
     @Override
     public void run() {
