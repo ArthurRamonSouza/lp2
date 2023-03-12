@@ -30,8 +30,8 @@ public class Main {
         for (int l = 0; l < tamMatriz; l++) {
         
             for (int c = 0; c < tamMatriz; c++) {
-                matrizA[l][c] = gerador.nextInt(0, 10);
-                matrizB[l][c] = gerador.nextInt(0, 10);
+                matrizA[l][c] = gerador.nextInt(0, 10000);
+                matrizB[l][c] = gerador.nextInt(0, 10000);
             }
         }
 
@@ -45,8 +45,8 @@ public class Main {
         long start = System. currentTimeMillis();
         while(linha < tamMatriz){
             m.setLinha(linha);
-            threads[linha] = new Thread(m);
-            threads[linha].start();
+            Thread t = new Thread(m);
+            t.start();
             linha++;
         }
         long end = System. currentTimeMillis();

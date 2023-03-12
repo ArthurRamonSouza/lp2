@@ -8,6 +8,7 @@ public class MultiplicacaoMatrizSequencial {
         matrizA = A;
         matrizB = B;
         matrizAB = AB;
+        this.tamMatriz = tamMatriz;
     }
 
     public long getTempoDecorrido(){
@@ -16,6 +17,7 @@ public class MultiplicacaoMatrizSequencial {
 
     public void run() {
         long start = System. currentTimeMillis();
+        
         for (int l = 0; l < tamMatriz; l++) {
             for (int c = 0; c < tamMatriz; c++) {
                 for (int i = 0; i < tamMatriz; i++) {
